@@ -15,15 +15,7 @@ with open('data/db.json', 'r', encoding = 'utf-8') as file_import:
     participants_list = json.load(file_import)
 
 usernames_list = []
-chat_id_username_dict = {}
-get_index_list = []
-sent_req_dict = {}
-first_message_id_dict = {}
-chat_id_surname_dict = {}
-chat_id_list = []
 user_agreement_status_dict = {}
-chat_id_dict = {}
-surnames_list = []
 
 @bot.message_handler(commands = ['start']) 
 def start(message):
@@ -1127,4 +1119,5 @@ def editing_data_denied(call):
     )
 
 if __name__ == '__main__':
+
     bot.infinity_polling()
